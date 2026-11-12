@@ -74,12 +74,25 @@ The scripts contain Google Drive paths used during the experiments. Before runni
 
 The datasets used in this study are also provided in the `data/` directory of this repository.
 
+## Dependencies
+
+BioSym was developed and executed in Google Colab using Python.
+
+The required Python libraries are imported within the provided scripts. Users should ensure that all required packages are available in the Google Colab environment before execution.
+
+## Reproducing Main Results
+
+- Run `biosym.py` using the training and validation datasets to reproduce the BioSym bi-objective symbolic regression results which is a set of non-dominated mathematical expressions representing different trade-offs between $R^2$ and expression complexity.
+- Run `single_objective.py` to reproduce the complex single-objective symbolic regression expression.
+- The required datasets are available in the `data/` directory.
+- Additional results are provided in `Supplementary_Materials.pdf`.
+
 ## Software Information
 
 - Software name: BioSym v1
 - Programming language: Python
-- Development environment: Google Colab
-- Hardware requirements: Internet-connected computer
+- Development and execution environment: Google Colab
+- Hardware requirements: Standard computer with internet access and a web browser
 - Year first official release: 2026
 
 ## Supplementary Material
@@ -88,6 +101,15 @@ Additional information related to the study is provided in:
 
 `Supplementary_Materials.pdf`
 
+## License
+
+BioSym is released under the MIT License. See the `LICENSE` file for details.
+
 ## Associated Manuscript
 
 **BioSym: A Bi-Objective Symbolic Regression Framework for Continuous Net Groundwater Recharge Estimation**
+
+## Contact
+
+Sharifa Rania Mahmud  
+Email: 0423054003@grad.cse.buet.ac.bd
