@@ -63,7 +63,7 @@ The `data/` directory contains:
 
 ## Running the Code
 
-The source code was developed and executed in Google Colab using Python.
+The source code was developed and executed in Google Colab, then exported as Python scripts for sharing and reproducibility through this repository.
 
 The scripts contain Google Drive paths used during the experiments. Before running the code:
 
@@ -78,7 +78,17 @@ The datasets used in this study are also provided in the `data/` directory of th
 
 BioSym was developed and executed in Google Colab using Python.
 
-The required Python libraries are imported within the provided scripts. Users should ensure that all required packages are available in the Google Colab environment before execution.
+The main Python libraries used are:
+
+- pandas
+- NumPy
+- scikit-learn
+- SciPy
+- Matplotlib
+- seaborn
+- openpyxl
+
+The scripts also use Google Colab integration to mount Google Drive and access input and output files.
 
 ## Reproducing Main Results
 
