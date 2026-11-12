@@ -11,16 +11,15 @@ BioSym produces a set of non-dominated mathematical expressions representing dif
 
 ## Repository Structure
 
-```text
 BioSym/
 ├── README.md
+├── LICENSE
 ├── biosym.py
 ├── single_objective.py
 ├── Supplementary_Materials.pdf
 └── data/
     ├── train219_dataset.csv
     └── validation_test99_dataset.csv
-```
 
 ## Input Variables
 
@@ -82,8 +81,8 @@ The required Python libraries are imported within the provided scripts. Users sh
 
 ## Reproducing Main Results
 
-- Run `biosym.py` using the training and validation datasets to reproduce the BioSym bi-objective symbolic regression results which is a set of non-dominated mathematical expressions representing different trade-offs between $R^2$ and expression complexity.
-- Run `single_objective.py` to reproduce the complex single-objective symbolic regression expression.
+- Run `biosym.py` using the training and validation datasets to reproduce the BioSym bi-objective symbolic regression results, including the set of non-dominated mathematical expressions representing different trade-offs between $R^2$ and expression complexity.
+- Run `single_objective.py` to reproduce the highest-$R^2$ single-objective symbolic regression expression used for comparison.
 - The required datasets are available in the `data/` directory.
 - Additional results are provided in `Supplementary_Materials.pdf`.
 
