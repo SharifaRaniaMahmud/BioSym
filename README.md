@@ -10,7 +10,7 @@ The framework uses genetic programming and NSGA-II to optimize two objectives:
 BioSym produces a set of non-dominated mathematical expressions representing different trade-offs between $R^2$ and expression complexity.
 
 ## Repository Structure
-
+```text
 BioSym/
 ├── README.md
 ├── LICENSE
@@ -20,6 +20,7 @@ BioSym/
 └── data/
     ├── train219_dataset.csv
     └── validation_test99_dataset.csv
+```
 
 ## Input Variables
 
