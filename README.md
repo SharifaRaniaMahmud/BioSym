@@ -15,8 +15,8 @@ BioSym produces a set of non-dominated mathematical expressions representing dif
 BioSym/
 ├── README.md
 ├── LICENSE
-├── biosym.ipynb
-├── single_objective.ipynb
+├── BioSym.ipynb
+├── SingleObj.ipynb
 ├── Supplementary_Materials.pdf
 └── data/
     ├── train219_dataset.csv
@@ -40,7 +40,7 @@ The target variable is continuous net groundwater recharge (`Net Groundwater Rec
 
 ## Source Code
 
-### `biosym.ipynb`
+### `BioSym.ipynb`
 
 Contains the implementation of BioSym, the proposed bi-objective symbolic regression framework using genetic programming and NSGA-II. It also includes the multiple linear regression (MLR) baseline, the hypervolume and convergence analysis, validation, and the sensitivity analysis.
 
@@ -49,7 +49,7 @@ BioSym optimizes:
 - $R^2$
 - Expression complexity
 
-### `single_objective.ipynb`
+### `SingleObj.ipynb`
 
 Contains the single-objective symbolic regression implementation used for comparison.
 
@@ -94,9 +94,9 @@ The main Python libraries used are:
 
 ## Reproducing Main Results
 
-- Run `biosym.ipynb` to reproduce the BioSym results, including the set of non-dominated mathematical expressions representing different trade-offs between $R^2$ and expression complexity, the MLR baseline, and the hypervolume, convergence, validation, and sensitivity analyses.
-- Run `single_objective.ipynb` to reproduce the highest-$R^2$ single-objective symbolic regression expression used for comparison.
-- The sensitivity analysis in `biosym.ipynb` consists of 200 runs and takes several hours.
+- Run `BioSym.ipynb` to reproduce the BioSym results, including the set of non-dominated mathematical expressions representing different trade-offs between $R^2$ and expression complexity, the MLR baseline, and the hypervolume, convergence, validation, and sensitivity analyses.
+- Run `SingleObj.ipynb` to reproduce the highest-$R^2$ single-objective symbolic regression expression used for comparison.
+- The sensitivity analysis in `BioSym.ipynb` consists of 200 runs and takes several hours.
 - Additional results are provided in `Supplementary_Materials.pdf`.
 
 ## Software Information
