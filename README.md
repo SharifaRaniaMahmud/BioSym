@@ -10,12 +10,13 @@ The framework uses genetic programming and NSGA-II to optimize two objectives:
 BioSym produces a set of non-dominated mathematical expressions representing different trade-offs between $R^2$ and expression complexity.
 
 ## Repository Structure
+
 ```text
 BioSym/
 ├── README.md
 ├── LICENSE
-├── biosym.py
-├── single_objective.py
+├── biosym.ipynb
+├── single_objective.ipynb
 ├── Supplementary_Materials.pdf
 └── data/
     ├── train219_dataset.csv
@@ -24,31 +25,31 @@ BioSym/
 
 ## Input Variables
 
-The study uses eight hydrogeological factors:
+The study uses eight hydrogeological factors (column names in the datasets are shown in brackets):
 
-- Soil
-- Slope
-- Rainfall
-- Land Use/Land Cover (LULC)
-- Lithology
-- Lineament Density
-- Geomorphology
-- Drainage Density
+- Soil (`Soil`)
+- Slope (`Slope`)
+- Rainfall (`Rain`)
+- Land Use/Land Cover (`LULC`)
+- Lithology (`Lithology`)
+- Lineament Density (`Lineament density`)
+- Geomorphology (`Geomorphology`)
+- Drainage Density (`Drainage density`)
 
-The target variable is continuous net groundwater recharge.
+The target variable is continuous net groundwater recharge (`Net Groundwater Recharge`).
 
 ## Source Code
 
-### `biosym.py`
+### `biosym.ipynb`
 
-Contains the implementation of BioSym, the proposed bi-objective symbolic regression framework using genetic programming and NSGA-II.
+Contains the implementation of BioSym, the proposed bi-objective symbolic regression framework using genetic programming and NSGA-II. It also includes the multiple linear regression (MLR) baseline, the hypervolume and convergence analysis, validation, and the sensitivity analysis.
 
 BioSym optimizes:
 
 - $R^2$
 - Expression complexity
 
-### `single_objective.py`
+### `single_objective.ipynb`
 
 Contains the single-objective symbolic regression implementation used for comparison.
 
@@ -58,25 +59,28 @@ This approach optimizes only $R^2$.
 
 The `data/` directory contains:
 
-- `train219_dataset.csv` — training dataset with 219 instances
-- `validation_test99_dataset.csv` — validation dataset with 99 instances
+- `train219_dataset.csv`: training dataset with 219 instances
+- `validation_test99_dataset.csv`: validation dataset with 99 instances
+
+### Data Source
+
+The datasets are derived from the CIMCA study:
+
+Zzaman, R.U., Nayeem, M.A., Nowreen, S., Newton, I.H., Islam, A.K.M.S., Zahid, A., Rahman, M.S., 2023. CIMCA: Infusing computational intelligence in multi-criteria analysis to assess groundwater potential for recharge. *Environmental Modelling & Software* 169, 105812. https://doi.org/10.1016/j.envsoft.2023.105812
+
+Soil, LULC, and lithology are represented by class values from the CIMCA study, while rainfall, slope, drainage density, lineament density, and geomorphology are continuous values.
 
 ## Running the Code
 
-The source code was developed and executed in Google Colab, then exported as Python scripts for sharing and reproducibility through this repository.
+The code was developed and executed in Google Colab.
 
-The scripts contain Google Drive paths used during the experiments. Before running the code:
+1. Open the notebook in Google Colab.
+2. Update the file paths to your own data location.
+3. Run all cells.
 
-1. Open the script in Google Colab.
-2. Mount Google Drive.
-3. Upload the required datasets to Google Drive.
-4. Update the dataset path in the script according to your own Google Drive location.
-
-The datasets used in this study are also provided in the `data/` directory of this repository.
+Random seeds are fixed (42–61 for the 20 independent runs), so the results can be reproduced.
 
 ## Dependencies
-
-BioSym was developed and executed in Google Colab using Python.
 
 The main Python libraries used are:
 
@@ -88,13 +92,11 @@ The main Python libraries used are:
 - seaborn
 - openpyxl
 
-The scripts also use Google Colab integration to mount Google Drive and access input and output files.
-
 ## Reproducing Main Results
 
-- Run `biosym.py` using the training and validation datasets to reproduce the BioSym bi-objective symbolic regression results, including the set of non-dominated mathematical expressions representing different trade-offs between $R^2$ and expression complexity.
-- Run `single_objective.py` to reproduce the highest-$R^2$ single-objective symbolic regression expression used for comparison.
-- The required datasets are available in the `data/` directory.
+- Run `biosym.ipynb` to reproduce the BioSym results, including the set of non-dominated mathematical expressions representing different trade-offs between $R^2$ and expression complexity, the MLR baseline, and the hypervolume, convergence, validation, and sensitivity analyses.
+- Run `single_objective.ipynb` to reproduce the highest-$R^2$ single-objective symbolic regression expression used for comparison.
+- The sensitivity analysis in `biosym.ipynb` consists of 200 runs and takes several hours.
 - Additional results are provided in `Supplementary_Materials.pdf`.
 
 ## Software Information
@@ -113,7 +115,9 @@ Additional information related to the study is provided in:
 
 ## License
 
-BioSym is released under the MIT License. See the `LICENSE` file for details.
+The source code of BioSym is released under the MIT License. See the `LICENSE` file for details.
+
+The datasets are derived from the CIMCA study. Please cite the CIMCA study when using the data.
 
 ## Associated Manuscript
 
